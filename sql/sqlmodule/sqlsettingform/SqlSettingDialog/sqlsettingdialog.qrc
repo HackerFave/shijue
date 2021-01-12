@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="/">
+    <file>resources/icons/line.png</file>
+    <file>resources/icons/arrow_left_normal.png</file>
+    <file>resources/icons/arrow_right_normal.png</file>
+    <file>resources/icons/arrow_left_disable.png</file>
+    <file>resources/icons/arrow_right_disable.png</file>
+    <file>resources/icons/halfselected2x.png</file>
+    <file>resources/icons/checked.png</file>
+    <file>resources/icons/parchecked.png</file>
+    <file>resources/icons/unchecked.png</file>
+    <file>resources/icons/down.png</file>
+    <file>resources/icons/up.png</file>
+    <file>resources/icons/ic_arrow_down.png</file>
+    <file>resources/icons/down.png</file>
+  </qresource>
+</RCC>

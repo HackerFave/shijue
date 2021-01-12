@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SqlSettingDialog", "SqlSettingDialog.vcxproj", "{F48BD1A8-3AE1-4626-8497-B5BF4BF89EC9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DatabaseInterface", "..\..\sqlmethod\DatabaseInterface\DatabaseInterface.vcxproj", "{9394873B-09C7-421D-B179-751F1BD2F0B2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MessageBoxUi", "..\..\..\messagebox\MessageBoxUi\MessageBoxUi.vcxproj", "{3448771D-F680-4F21-B84E-C6E675B207D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F48BD1A8-3AE1-4626-8497-B5BF4BF89EC9}.Debug|x64.ActiveCfg = Debug|x64
+		{F48BD1A8-3AE1-4626-8497-B5BF4BF89EC9}.Debug|x64.Build.0 = Debug|x64
+		{F48BD1A8-3AE1-4626-8497-B5BF4BF89EC9}.Release|x64.ActiveCfg = Release|x64
+		{F48BD1A8-3AE1-4626-8497-B5BF4BF89EC9}.Release|x64.Build.0 = Release|x64
+		{9394873B-09C7-421D-B179-751F1BD2F0B2}.Debug|x64.ActiveCfg = Debug|x64
+		{9394873B-09C7-421D-B179-751F1BD2F0B2}.Debug|x64.Build.0 = Debug|x64
+		{9394873B-09C7-421D-B179-751F1BD2F0B2}.Release|x64.ActiveCfg = Release|x64
+		{9394873B-09C7-421D-B179-751F1BD2F0B2}.Release|x64.Build.0 = Release|x64
+		{3448771D-F680-4F21-B84E-C6E675B207D1}.Debug|x64.ActiveCfg = Debug|x64
+		{3448771D-F680-4F21-B84E-C6E675B207D1}.Debug|x64.Build.0 = Debug|x64
+		{3448771D-F680-4F21-B84E-C6E675B207D1}.Release|x64.ActiveCfg = Release|x64
+		{3448771D-F680-4F21-B84E-C6E675B207D1}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF53CB91-A69D-4EE5-A72E-92ABEA536142}
+	EndGlobalSection
+EndGlobal

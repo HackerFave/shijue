@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TemplateMainFormClass</class>
+ <widget class="QDialog" name="TemplateMainFormClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TemplateMainForm</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget_addplug">
+     <property name="tabPosition">
+      <enum>QTabWidget::West</enum>
+     </property>
+     <property name="currentIndex">
+      <number>4</number>
+     </property>
+     <property name="elideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <widget class="QWidget" name="tab_alg">
+      <attribute name="title">
+       <string>算法库</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_hisdata">
+      <attribute name="title">
+       <string>历史数据模板</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_defect">
+      <attribute name="title">
+       <string>缺陷过滤</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_run">
+      <attribute name="title">
+       <string>运行界面</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_PLC">
+      <attribute name="title">
+       <string>PLC控制界面</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="TemplateMainForm.qrc"/>
+ </resources>
+ <connections/>
+</ui>

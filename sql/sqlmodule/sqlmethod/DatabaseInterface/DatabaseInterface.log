@@ -1,0 +1,8 @@
+﻿  Reading Qt configuration (C:/Qt/Qt5.12.4/5.12.4/msvc2017_64/bin/qmake)
+  mrun_sqlmethod.cpp
+  SqlMethod.cpp
+  sqlOperation.cpp
+d:\tanchuang\manuvision\platform\runtime\plugins\sqlmodule\sqlmethod\databaseinterface\mrun_sqlmethod.cpp(1): warning C4005: “BUILD_DLL”: 宏重定义
+  d:\tanchuang\manuvision\platform\runtime\plugins\sqlmodule\sqlmethod\databaseinterface\mrun_sqlmethod.cpp: note: 参见“BUILD_DLL”的前一个定义
+    正在创建库 D:\tanchuang\manuvision\platform\test\x64\Release\DatabaseInterface.lib 和对象 D:\tanchuang\manuvision\platform\test\x64\Release\DatabaseInterface.exp
+  DatabaseInterface.vcxproj -> D:\tanchuang\manuvision\platform\test\x64\Release\DatabaseInterface.dll

@@ -1,0 +1,16 @@
+#pragma once
+#include <QObject>
+#include <QSqlQuery>
+#include <QSqlDatabase>
+#include <QSqlRecord>
+#include <QSqlError>
+#include <QMap>
+#include <map>
+#include <QMutexLocker>
+#include <list>
+#include <qdebug.h>
+#include <QString>
+#include <qstringlist.h>
+#include <qsettings.h>
+#include <QCoreApplication>
+#include <qdir.h>
