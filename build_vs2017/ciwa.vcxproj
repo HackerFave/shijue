@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>C:\Qt\opencv\build\x64\vc15\lib;C:\Qt\opencv\build\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_SERIALPORT_LIB;QT_PRINTSUPPORT_LIB;QT_CONCURRENT_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)/include;..\..\manuvision-algorithm\3rdparty\opencv\include;..\alg;..\source;..\ui;.\GeneratedFiles;..\tool\daxiaobian;..\tool\liekuai;..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib;$(QTDIR)\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);$(PYLON_DEV_DIR)\lib\x64;$(CUDA_PATH_V10_1)/lib/x64;..\..\manuvision-algorithm\3rdparty\opencv\lib;$(QTDIR)\lib;C:\Qt\opencv\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>plcvirtual.lib;cudart.lib;qtmaind.lib;Qt5AxBase.lib;Qt5AxContainerd.lib;Qt5AxBased.lib;Qt5Chartsd.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Networkd.lib;Qt5Sqld.lib;Qt5Widgetsd.lib;Qt5SerialPortd.lib;Qt5PrintSupportd.lib;opencv_world400d.lib;Qt5Concurrentd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)/include;..\..\manuvision-algorithm\3rdparty\opencv\include;..\alg;..\source;..\ui;.\GeneratedFiles;..\tool\daxiaobian;..\tool\liekuai;..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib;$(QTDIR)\include\QtConcurrent;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_SERIALPORT_LIB;QT_PRINTSUPPORT_LIB;QT_CONCURRENT_LIB;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_SERIALPORT_LIB;QT_PRINTSUPPORT_LIB;QT_CONCURRENT_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)/include;$(CV_INC400);..\tool\toolui;..\tool\liekuai;..\tool\daxiaobian;..\alg;..\source;..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <SupportJustMyCode>true</SupportJustMyCode>
+      <Optimization>Disabled</Optimization>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);$(PYLON_DEV_DIR)\lib\x64;$(CUDA_PATH_V10_1)/lib/x64;$(CV_LIB400);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>plcvirtual.lib;cudart.lib;opencv_world400.lib;qtmain.lib;Qt5AxContainer.lib;Qt5AxBase.lib;Qt5Charts.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Network.lib;Qt5Sql.lib;Qt5Widgets.lib;Qt5SerialPort.lib;Qt5PrintSupport.lib;Qt5Concurrent.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)/include;$(CV_INC400);..\tool\toolui;..\tool\liekuai;..\tool\daxiaobian;..\alg;..\source;..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtConcurrent;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_SERIALPORT_LIB;QT_PRINTSUPPORT_LIB;QT_CONCURRENT_LIB;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\camera\cameramanage\cameramanage.cpp" />
+    <ClCompile Include="..\excel\qexcelengine.cpp" />
+    <ClCompile Include="..\socket\ciwasocket.cpp" />
+    <ClCompile Include="..\socket\tcp_server.cpp" />
+    <ClCompile Include="..\socket\tcp_server_private.cpp" />
+    <ClCompile Include="..\source\alg.cpp" />
+    <ClCompile Include="..\source\baseparam.cpp" />
+    <ClCompile Include="..\source\group.cpp" />
+    <ClCompile Include="..\source\log.cpp" />
+    <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\source\plc.cpp" />
+    <ClCompile Include="..\source\postprocess.cpp" />
+    <ClCompile Include="..\source\solution.cpp" />
+    <ClCompile Include="..\source\threshold.cpp" />
+    <ClCompile Include="..\source\wantusblight.cpp" />
+    <ClCompile Include="..\source\writeregistermodel.cpp" />
+    <ClCompile Include="..\ui\ciwa.cpp" />
+    <ClCompile Include="..\ui\ciwamsgdialog.cpp" />
+    <ClCompile Include="..\ui\commonconfigini.cpp" />
+    <ClCompile Include="..\ui\cpumemorylabel.cpp" />
+    <ClCompile Include="..\ui\creatreportform.cpp" />
+    <ClCompile Include="..\ui\databasesqlite.cpp" />
+    <ClCompile Include="..\ui\debugconfig.cpp" />
+    <ClCompile Include="..\ui\debugdata.cpp" />
+    <ClCompile Include="..\ui\detectionscheme.cpp" />
+    <ClCompile Include="..\ui\detectionschemeroi.cpp" />
+    <ClCompile Include="..\ui\donutbreakdownchart.cpp" />
+    <ClCompile Include="..\ui\chartslice.cpp" />
+    <ClCompile Include="..\ui\excelexport.cpp" />
+    <ClCompile Include="..\ui\fenpIni.cpp" />
+    <ClCompile Include="..\ui\gpumemorylabel.cpp" />
+    <ClCompile Include="..\ui\importandexport.cpp" />
+    <ClCompile Include="..\ui\login.cpp" />
+    <ClCompile Include="..\ui\loginthread.cpp" />
+    <ClCompile Include="..\ui\messageDialog.cpp" />
+    <ClCompile Include="..\ui\mylistwidget.cpp" />
+    <ClCompile Include="..\ui\nbaseswitchbutton.cpp" />
+    <ClCompile Include="..\ui\planmsg.cpp" />
+    <ClCompile Include="..\ui\planmsgdialog.cpp" />
+    <ClCompile Include="..\ui\proc.cpp" />
+    <ClCompile Include="..\ui\publicClass.cpp" />
+    <ClCompile Include="..\ui\runframeinfo.cpp" />
+    <ClCompile Include="..\ui\runframenewui.cpp" />
+    <ClCompile Include="..\ui\runframetable.cpp" />
+    <ClCompile Include="..\ui\runframetablewidget.cpp" />
+    <ClCompile Include="..\ui\runtoprightdialog.cpp" />
+    <ClCompile Include="..\ui\solutionicon.cpp" />
+    <ClCompile Include="..\ui\systemconfig.cpp" />
+    <ClCompile Include="..\ui\systeminfo.cpp" />
+    <ClCompile Include="..\ui\tableWidgetParent.cpp" />
+    <ClCompile Include="..\ui\widgetpic.cpp" />
+    <ClCompile Include="..\ui\windowing.cpp" />
+    <ClCompile Include="addTestReord.cpp" />
+    <ClCompile Include="baseWidget.cpp" />
+    <ClCompile Include="databaseSqlInset.cpp" />
+    <ClCompile Include="dataMainFormZJ.cpp" />
+    <ClCompile Include="dataSql.cpp" />
+    <ClCompile Include="operationPDF.cpp" />
+    <ClCompile Include="opercheckboxitem.cpp" />
+    <ClCompile Include="proCategoryItem.cpp" />
+    <ClCompile Include="qualityStandardComboBox.cpp" />
+    <ClCompile Include="qualityStandardItem.cpp" />
+    <ClCompile Include="qualityStandardView.cpp" />
+    <ClCompile Include="remarkView.cpp" />
+    <ClCompile Include="settingFormPLC.cpp" />
+    <ClCompile Include="sqlOperation.cpp" />
+    <ClCompile Include="stripQualityView.cpp" />
+    <ClCompile Include="tableViewEditItemForm.cpp" />
+    <ClCompile Include="tableViewQualityInspectionRecord.cpp" />
+    <ClCompile Include="testRecordView.cpp" />
+    <ClCompile Include="threadTaskSql.cpp" />
+    <ClCompile Include="yellowDirtItem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\ui\ciwa.ui" />
+    <QtUic Include="..\ui\creatreportform.ui" />
+    <QtUic Include="..\ui\debugconfig.ui" />
+    <QtUic Include="..\ui\detectionscheme.ui" />
+    <QtUic Include="..\ui\excelexport.ui" />
+    <QtUic Include="..\ui\importandexport.ui" />
+    <QtUic Include="..\ui\login.ui" />
+    <QtUic Include="..\ui\messageDialog.ui" />
+    <QtUic Include="..\ui\planmsg.ui" />
+    <QtUic Include="..\ui\planmsgdialog.ui" />
+    <QtUic Include="..\ui\runframeinfo.ui" />
+    <QtUic Include="..\ui\runframenewui.ui" />
+    <QtUic Include="..\ui\runframetable.ui" />
+    <QtUic Include="..\ui\runframetablewidget.ui" />
+    <QtUic Include="..\ui\runtoprightdialog.ui" />
+    <QtUic Include="..\ui\systemconfig.ui" />
+    <QtUic Include="..\ui\tableWidgetParent.ui" />
+    <QtUic Include="..\ui\windowing.ui" />
+    <QtUic Include="addTestReord.ui" />
+    <QtUic Include="baseWidget.ui" />
+    <QtUic Include="dataMainFormZJ.ui" />
+    <QtUic Include="opercheckboxitem.ui" />
+    <QtUic Include="proCategoryItem.ui" />
+    <QtUic Include="qualityStandardComboBox.ui" />
+    <QtUic Include="qualityStandardItem.ui" />
+    <QtUic Include="qualityStandardView.ui" />
+    <QtUic Include="remarkView.ui" />
+    <QtUic Include="settingFormPLC.ui" />
+    <QtUic Include="stripQualityView.ui" />
+    <QtUic Include="tableViewEditItemForm.ui" />
+    <QtUic Include="tableViewQualityInspectionRecord.ui" />
+    <QtUic Include="testRecordView.ui" />
+    <QtUic Include="yellowDirtItem.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="..\resources\Resource.qrc" />
+    <QtRcc Include="..\ui\ciwa.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ui\ciwa.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ui\detectionscheme.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ui\detectionschemeroi.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ui\planmsg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ui\planmsgdialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="sqlOperation.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;.\..\..\manuvision-algorithm\3rdparty\opencv\include;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib;$(QTDIR)\include\QtConcurrent</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtConcurrent</IncludePath>
+    </QtMoc>
+    <QtMoc Include="threadTaskSql.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;.\..\..\manuvision-algorithm\3rdparty\opencv\include;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </QtMoc>
+    <QtMoc Include="tableViewQualityInspectionRecord.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </QtMoc>
+    <QtMoc Include="settingFormPLC.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </QtMoc>
+    <QtMoc Include="yellowDirtItem.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </QtMoc>
+    <QtMoc Include="testRecordView.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+    </QtMoc>
+    <QtMoc Include="stripQualityView.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+    </QtMoc>
+    <QtMoc Include="tableViewEditItemForm.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+    </QtMoc>
+    <QtMoc Include="..\ui\tableWidgetParent.h" />
+    <QtMoc Include="..\ui\nbaseswitchbutton.h" />
+    <ClInclude Include="..\camera\cameramanage\cameracomm.h" />
+    <ClInclude Include="..\camera\cameramanage\camerainterface.h" />
+    <ClInclude Include="..\camera\cameramanage\cameramanage.h" />
+    <ClInclude Include="..\excel\qexcelengine.h" />
+    <ClInclude Include="..\source\plc.h" />
+    <ClInclude Include="..\source\plcinterface.h" />
+    <ClInclude Include="..\source\postprocess.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;.\..\..\manuvision-algorithm\3rdparty\opencv\include;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </ClInclude>
+    <ClInclude Include="..\source\threshold.h" />
+    <ClInclude Include="..\source\wantusblight.h" />
+    <QtMoc Include="..\ui\importandexport.h" />
+    <QtMoc Include="..\ui\excelexport.h" />
+    <QtMoc Include="..\ui\messageDialog.h" />
+    <ClInclude Include="..\ui\ciwamsgdialog.h" />
+    <QtMoc Include="..\ui\commonconfigini.h" />
+    <QtMoc Include="..\ui\creatreportform.h" />
+    <ClInclude Include="..\ui\dumpfile.h" />
+    <QtMoc Include="dataMainFormZJ.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+    </QtMoc>
+    <QtMoc Include="proCategoryItem.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+    </QtMoc>
+    <QtMoc Include="remarkView.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+    </QtMoc>
+    <QtMoc Include="baseWidget.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort</IncludePath>
+    </QtMoc>
+    <QtMoc Include="qualityStandardView.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </QtMoc>
+    <QtMoc Include="qualityStandardItem.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </QtMoc>
+    <QtMoc Include="qualityStandardComboBox.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </QtMoc>
+    <ClInclude Include="..\ui\publicClass.h" />
+    <QtMoc Include="addTestReord.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;.\..\..\manuvision-algorithm\3rdparty\opencv\include;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </QtMoc>
+    <ClInclude Include="databaseSqlInset.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;.\..\..\manuvision-algorithm\3rdparty\opencv\include;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </ClInclude>
+    <QtMoc Include="dataSql.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;.\..\..\manuvision-algorithm\3rdparty\opencv\include;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport</IncludePath>
+    </QtMoc>
+    <QtMoc Include="operationPDF.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;.\..\..\manuvision-algorithm\3rdparty\opencv\include;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib;$(QTDIR)\include\QtConcurrent</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtConcurrent</IncludePath>
+    </QtMoc>
+    <QtMoc Include="opercheckboxitem.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;.\..\..\manuvision-algorithm\3rdparty\opencv\include;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.\..\tool\daxiaobian;.\..\tool\liekuai;.\..\tool\toolui;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;C:\Qt\opencv\build\include;C:\Qt\opencv\build\x64\vc15\lib;$(QTDIR)\include\QtConcurrent</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\include;$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\tool\toolui;.\..\tool\liekuai;.\..\tool\daxiaobian;.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtConcurrent</IncludePath>
+    </QtMoc>
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="..\ui\windowing.h" />
+    <QtMoc Include="..\ui\widgetpic.h" />
+    <QtMoc Include="..\ui\login.h" />
+    <QtMoc Include="..\socket\ciwasocket.h" />
+    <QtMoc Include="..\socket\tcp_server.h" />
+    <QtMoc Include="..\socket\tcp_server_private.h" />
+    <ClInclude Include="..\source\baseparam.h" />
+    <ClInclude Include="..\source\group.h" />
+    <ClInclude Include="..\source\log.h" />
+    <ClInclude Include="..\source\solution.h" />
+    <QtMoc Include="..\ui\cpumemorylabel.h" />
+    <QtMoc Include="..\source\writeregistermodel.h" />
+    <ClInclude Include="..\ui\customtabstyle.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </ClInclude>
+    <ClInclude Include="..\ui\databasesqlite.h" />
+    <QtMoc Include="..\ui\debugconfig.h" />
+    <ClInclude Include="..\ui\debugdata.h" />
+    <ClInclude Include="..\ui\donutbreakdownchart.h" />
+    <QtMoc Include="..\ui\chartslice.h" />
+    <QtMoc Include="..\ui\runframeinfo.h" />
+    <QtMoc Include="..\ui\systeminfo.h" />
+    <QtMoc Include="..\ui\gpumemorylabel.h" />
+    <QtMoc Include="..\ui\runframetable.h" />
+    <QtMoc Include="..\ui\runframenewui.h" />
+    <QtMoc Include="..\ui\runframetablewidget.h" />
+    <QtMoc Include="..\ui\runtoprightdialog.h" />
+    <QtMoc Include="..\ui\loginthread.h" />
+    <ClInclude Include="..\ui\fenpIni.h" />
+    <ClInclude Include="..\ui\proc.h" />
+    <ClInclude Include="..\ui\solutionicon.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSerialBus</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(PYLON_DEV_DIR)\include;$(CUDA_PATH_V10_1)\include;$(CV_INC400);.\..\alg;.\..\source;.\..\ui;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtSerialBus</IncludePath>
+    </ClInclude>
+    <ClInclude Include="..\ui\uicommon.h" />
+    <QtMoc Include="..\ui\mylistwidget.h" />
+    <QtMoc Include="..\ui\systemconfig.h" />
+    <ClInclude Include="..\source\alg.h" />
+    <ClInclude Include="..\source\common.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ciwa.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="msvc2017_64" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

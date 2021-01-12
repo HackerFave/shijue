@@ -1,0 +1,65 @@
+<RCC>
+  <qresource prefix="/ciwa"/>
+  <qresource prefix="/system">
+    <file>../resources/icons/system/设置PLC.png</file>
+    <file>../resources/icons/system/不良品.png</file>
+    <file>../resources/icons/system/良品.png</file>
+    <file>../resources/icons/system/blueline.png</file>
+    <file>../resources/icons/system/分隔.png</file>
+    <file>../resources/icons/system/基本参数.png</file>
+    <file>../resources/icons/system/刷新.png</file>
+    <file>../resources/icons/system/配置参数.png</file>
+    <file>../resources/icons/system/connect.png</file>
+    <file>../resources/icons/system/unconnect.png</file>
+    <file>../resources/icons/system/line.png</file>
+    <file>../resources/icons/system/用户管理.png</file>
+    <file>../resources/icons/system/连接.png</file>
+    <file>../resources/icons/system/未连接.png</file>
+    <file>../resources/icons/system/网络配置.png</file>
+    <file>../resources/icons/system/相机配置.png</file>
+    <file>../resources/icons/system/信息系统.png</file>
+    <file>../resources/icons/system/设置20_20.png</file>
+    <file>../resources/icons/system/PLC模拟.png</file>
+    <file>../resources/icons/system/PLC现场.png</file>
+  </qresource>
+  <qresource prefix="/">
+    <file>../resources/icons/ic_success.png</file>
+    <file>../resources/icons/off.png</file>
+    <file>../resources/icons/on.png</file>
+    <file>../resources/icons/ic_warning.png</file>
+    <file>../resources/icons/ic_pop_warning.png</file>
+    <file>../resources/icons/ic_arrow_up.png</file>
+    <file>../resources/icons/solution.png</file>
+    <file>../resources/icons/ic_count_1.png</file>
+    <file>../resources/icons/ic_count_2.png</file>
+    <file>../resources/icons/ic_count_3.png</file>
+    <file>../resources/icons/ic_test.png</file>
+    <file>../resources/icons/ic_save.png</file>
+    <file>../resources/icons/ic_checkbox_normal.png</file>
+    <file>../resources/icons/ic_checkbox_selected.png</file>
+    <file>../resources/icons/ic_back.png</file>
+    <file>../resources/icons/ic_solution_help.png</file>
+    <file>../resources/icons/ic_solution_exit.png</file>
+    <file>../resources/icons/ic_solution_title.png</file>
+    <file>../resources/icons/ic_output.png</file>
+    <file>../resources/icons/ic_clear.png</file>
+    <file>../resources/icons/ic_nav_lock_normal.png</file>
+    <file>../resources/icons/ic_nav_lock_selected.png</file>
+    <file>../resources/icons/ic_nav_quit_normal.png</file>
+    <file>../resources/icons/ic_nav_quit_pressed.png</file>
+    <file>../resources/icons/ic_arrow_down.png</file>
+    <file>../resources/icons/ic_start.png</file>
+    <file>../resources/icons/ic_stop.png</file>
+    <file>../resources/icons/ic_Splitview.png</file>
+    <file>../resources/icons/ic_nav_input_normal.png</file>
+    <file>../resources/icons/ic_nav_input_selected.png</file>
+    <file>../resources/icons/ic_nav_setting_normal.png</file>
+    <file>../resources/icons/ic_nav_setting_selected.png</file>
+    <file>../resources/icons/ic_nav_test_selected.png</file>
+    <file>../resources/icons/ic_nav_test_normal.png</file>
+    <file>../resources/icons/ic_nav_run_normal.png</file>
+    <file>../resources/icons/login.jpg</file>
+    <file>../resources/icons/ic_nav_run_selected.png</file>
+    <file>../resources/icons/main_logo.png</file>
+  </qresource>
+</RCC>

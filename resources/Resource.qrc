@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="img">
+    <file>icons/system/基本参数.png</file>
+    <file>icons/edit.png</file>
+    <file>icons/form.png</file>
+    <file>icons/login.jpg</file>
+    <file>icons/main_logo.png</file>
+    <file>icons/close.png</file>
+    <file>icons/closeBlack.png</file>
+    <file>icons/closeW.png</file>
+    <file>icons/maxBtn.png</file>
+    <file>icons/min.png</file>
+    <file>icons/minBtn.png</file>
+    <file>icons/ic_success.png</file>
+  </qresource>
+</RCC>

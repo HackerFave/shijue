@@ -1,0 +1,8 @@
+<cfg>
+    <biglow>20</biglow>
+    <bighigh>40</bighigh>
+	<smalllow>10</smalllow>
+	<smallhigh>30</smallhigh>
+	<bigsmall>15</bigsmall>
+</cfg>
+

@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreatReportForm</class>
+ <widget class="QDialog" name="CreatReportForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>268</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>CreatReportForm</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+background: #1E1F21;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <property name="spacing">
+    <number>9</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame {
+background: #2C2C2C;
+box-shadow: 0 -1px 0 0 rgba(0,0,0,0.80);
+border-radius: 0 0 4px 4px;
+border-radius: 0px 0px 4px 4px;
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="font">
+             <font>
+              <family>黑体</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgba(255, 255, 255, 170);</string>
+            </property>
+            <property name="text">
+             <string>填写批次信息</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>50</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="styleSheet">
+              <string notr="true">color: rgba(255, 255, 255, 170);</string>
+             </property>
+             <property name="text">
+              <string>批次编号</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="editBatchNum">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+	 background-color: rgb(21, 21, 21);
+     border-width:0px;  
+     border-style:solid; 
+     color: rgba(255, 255, 255, 170);
+   
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>填写数字字母符号</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="styleSheet">
+              <string notr="true">color: rgba(255, 255, 255, 170);</string>
+             </property>
+             <property name="text">
+              <string>日期</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QComboBox" name="comboYear">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
+	 background-color: rgb(21, 21,21);
+     border-width:0px;
+     gridline-color: rgb(0, 0, 0);
+     color: rgba(255, 255, 255, 170);
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboMonth">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
+	 background-color: rgb(21, 21,21);
+     border-width:0px;
+     gridline-color: rgb(0, 0, 0);
+     color: rgba(255, 255, 255, 170);
+}</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>01</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>02</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>03</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>04</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>05</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>06</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>07</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>08</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>09</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>10</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>11</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>12</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboDay">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
+	 background-color: rgb(21, 21,21);
+     border-width:0px;
+     gridline-color: rgb(0, 0, 0);
+     color: rgba(255, 255, 255, 170);
+}</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>01</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>02</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>03</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>04</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>05</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>06</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>07</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>08</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>09</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>10</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>11</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>12</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>13</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>14</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>15</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>16</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>17</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>18</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>19</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>20</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>21</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>22</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>23</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>24</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>25</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>26</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>27</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>28</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>29</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>30</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>31</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>50</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_3">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>80</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>5</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnCancel">
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+color: rgba(255, 255, 255,177);
+background: #0058D0;
+border-radius: 4px;
+border-radius: 4px;
+}
+QPushButton:pressed {  
+    /* 改变背景色 */  
+    background-color:rgb(40,85,20);  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:2px;  
+    padding-top:2px;  
+}  
+</string>
+          </property>
+          <property name="text">
+           <string>取  消</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="btnWait">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+color: rgba(255, 255, 255,177);
+background: #0058D0;
+border-radius: 4px;
+border-radius: 4px;
+}
+QPushButton:pressed {  
+    /* 改变背景色 */  
+    background-color:rgb(40,85,20);  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:2px;  
+    padding-top:2px;  
+}  
+</string>
+            </property>
+            <property name="text">
+             <string>取消获取主机批次</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnCreate">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+color: rgba(255, 255, 255,177);
+background: #0058D0;
+border-radius: 4px;
+border-radius: 4px;
+}
+QPushButton:pressed {  
+    /* 改变背景色 */  
+    background-color:rgb(40,85,20);  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:2px;  
+    padding-top:2px;  
+}  
+</string>
+            </property>
+            <property name="text">
+             <string>创  建</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>5</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

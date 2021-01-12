@@ -1,0 +1,11 @@
+<cfg>
+    <model>D:\dongci-tensorrt\build_vs2017\Model\dc-1109-12_ep28_F10.70_woaux_fp32_pth13_op9.jiami.trtengine</model>
+	<serialized>1</serialized>
+	<encrypt>1</encrypt>
+    <gpus>0</gpus>
+	<means>123.675,116.28,103.53</means>
+	<stds>58.395,57.12,57.375</stds>
+	<scores>0.5</scores>
+	<ishalf>1</ishalf>
+</cfg>
+

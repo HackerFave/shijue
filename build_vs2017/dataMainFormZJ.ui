@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dataMainFormZJ</class>
+ <widget class="QWidget" name="dataMainFormZJ">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1254</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>dataMainFormZJ</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#dataMainFormZJ{
+background-color: rgb(255, 255, 255);
+}
+
+   </string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="font">
+         <font>
+          <family>黑体</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTabWidget#tabWidget{
+ background-color: rgb(47, 47, 47);
+ color:white;
+} 
+QTabWidget#tabWidget&gt;QTabBar::tab:selected{
+background:rgb(108,108,108);
+color:white;
+} </string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(47, 47, 47);
+color:rgb(255,255,255);</string>
+         </property>
+         <attribute name="title">
+          <string>生产工艺记录表</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QComboBox" name="comboBox_banci">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>9</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox{
+border:1px solid gray;
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+height: 50px;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+    /*outline: 1px solid gray;    选定项的虚框 */
+    border: 0px solid gray;   /* 整个下拉窗体的边框 */
+    color: white;
+    background-color: #545454;   /* 整个下拉窗体的背景色 */
+    selection-background-color: #55aaff;   /* 整个下拉窗体被选中项的背景色 */
+}
+
+/* 下拉后，整个下拉窗体每项的样式 */
+QComboBox QAbstractItemView::item {
+    height: 50px;   /* 项的高度 */
+}
+
+/* 下拉后，整个下拉窗体越过每项的样式 */
+QComboBox QAbstractItemView::item:hover {
+    color: #FFFFFF;
+    background-color: #55aaff;   /* 整个下拉窗体越过每项的背景色 */
+}
+
+/* 下拉后，整个下拉窗体被选择的每项的样式 */
+QComboBox QAbstractItemView::item:selected {
+    color: #FFFFFF;
+    background-color: #55aaff;
+}</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>白班1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>白班2</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>夜班1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>夜班2</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_load">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>9</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton#toolButton_load{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_load:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+              </property>
+              <property name="text">
+               <string>加载</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_savesql">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>9</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton#toolButton_savesql{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_savesql:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+              </property>
+              <property name="text">
+               <string>存档</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_export">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton#toolButton_export{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_export:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+              </property>
+              <property name="text">
+               <string>导出</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_test">
+              <property name="styleSheet">
+               <string notr="true">QToolButton#toolButton_test{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_test:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+              </property>
+              <property name="text">
+               <string>测试</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_pdf">
+              <property name="styleSheet">
+               <string notr="true">QToolButton#toolButton_pdf{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_pdf:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+              </property>
+              <property name="text">
+               <string>pdf</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>注：正确填写产线号，订单号及日期；常规产品种类打对勾，特殊的输入产品类别；加热温度存在&gt;10℃误差的及时报修。</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QTableView" name="tableView_record">
+            <property name="styleSheet">
+             <string notr="true">QTableView#tableView{
+background-color: rgb(255, 255, 255);
+}
+QTableView{
+    color: white;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    background-color: rgb(108, 108, 108);               /*表格内背景色*/
+    alternate-background-color: rgb(64, 64, 64);
+    selection-color: white;                             /*选中区域的文字颜色*/
+    selection-background-color: rgb(0, 85, 127);        /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 0px 0px;
+    /*background-color: rgb(250, 250, 115);*/
+    /*alternate-background-color: rgb(141, 163, 215);*/
+}
+QHeaderView{
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(0, 85, 127);/*设置表头空白区域背景色*/
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+QHeaderView#hHeader::section {
+    background-color:darkcyan;
+    color: red;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    height:40;
+    width:300;
+    selection-background-color: rgb(0, 85, 127);
+}
+QHeaderView#vHeader::section {
+    background-color: #000000;
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    width:30;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(47, 47, 47);</string>
+         </property>
+         <attribute name="title">
+          <string>带材质量记录表</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QGroupBox" name="groupBox">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="title">
+                 <string>订单信息</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_4">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item row="1" column="0">
+                  <widget class="stripQualityView" name="tableView_stripQuality">
+                   <property name="styleSheet">
+                    <string notr="true">QTableView{
+    color: white;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    background-color: rgb(108, 108, 108);               /*表格内背景色*/
+    alternate-background-color: rgb(64, 64, 64);
+    selection-color: white;                             /*选中区域的文字颜色*/ 
+    selection-background-color: transparent;       /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 0px 0px;
+    /*background-color: rgb(250, 250, 115);*/
+    /*alternate-background-color: rgb(141, 163, 215);*/
+}
+QHeaderView{
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(0, 85, 127);/*设置表头空白区域背景色*/
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+QHeaderView#hHeader::section {
+    background-color:darkcyan;
+    color: red;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    height:40;
+    width:300;
+    selection-background-color: rgb(0, 85, 127);
+}
+QHeaderView#vHeader::section {
+    background-color: #000000;
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    width:30;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_5">
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <spacer name="horizontalSpacer_9">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>10</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButton_export_endReport">
+                     <property name="minimumSize">
+                      <size>
+                       <width>60</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QToolButton#toolButton_export_endReport{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_export_endReport:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>导出带材表</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_5">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButton_editDataSave">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QToolButton#toolButton_editDataSave{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_editDataSave:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>保存编辑数据</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButton_saveData_test">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QToolButton#toolButton_saveData_test{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_saveData_test:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>测试</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButton_addRecord_test">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QToolButton#toolButton_addRecord_test{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_addRecord_test:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>添加ID</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_juanhao">
+                     <property name="minimumSize">
+                      <size>
+                       <width>200</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QComboBox{
+border:1px solid gray;
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+height: 50px;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+    /*outline: 1px solid gray;    选定项的虚框 */
+    border: 0px solid gray;   /* 整个下拉窗体的边框 */
+    color: white;
+    background-color: #545454;   /* 整个下拉窗体的背景色 */
+    selection-background-color: #55aaff;   /* 整个下拉窗体被选中项的背景色 */
+}
+
+/* 下拉后，整个下拉窗体每项的样式 */
+QComboBox QAbstractItemView::item {
+    height: 50px;   /* 项的高度 */
+}
+
+/* 下拉后，整个下拉窗体越过每项的样式 */
+QComboBox QAbstractItemView::item:hover {
+    color: #FFFFFF;
+    background-color: #55aaff;   /* 整个下拉窗体越过每项的背景色 */
+}
+
+/* 下拉后，整个下拉窗体被选择的每项的样式 */
+QComboBox QAbstractItemView::item:selected {
+    color: #FFFFFF;
+    background-color: #55aaff;
+}</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButton_export_stripQuality">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QToolButton#toolButton_export_stripQuality{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_export_stripQuality:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>export</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_2">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="title">
+                 <string>在线监测记录</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_6">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item row="1" column="0">
+                  <widget class="QScrollArea" name="scrollArea">
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="scrollAreaWidgetContents">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>603</width>
+                      <height>161</height>
+                     </rect>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_5">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="testRecordView" name="tableView_testRecord">
+                       <property name="styleSheet">
+                        <string notr="true">QTableView{
+    color: white;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    background-color: rgb(108, 108, 108);               /*表格内背景色*/
+    alternate-background-color: rgb(64, 64, 64);
+    selection-color: white;                             /*选中区域的文字颜色*/
+    selection-background-color: transparent;        /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 0px 0px;
+    /*background-color: rgb(250, 250, 115);*/
+    /*alternate-background-color: rgb(141, 163, 215);*/
+}
+QHeaderView{
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(0, 85, 127);/*设置表头空白区域背景色*/
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+QHeaderView#hHeader::section {
+    background-color:darkcyan;
+    color: red;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    height:40;
+    width:300;
+    selection-background-color: rgb(0, 85, 127);
+}
+QHeaderView#vHeader::section {
+    background-color: #000000;
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    width:30;
+}</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <spacer name="horizontalSpacer_11">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>10</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_recordNum">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButton_previous">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QToolButton{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>上一页</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="spinBox_page">
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QSpinBox{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+</string>
+                     </property>
+                     <property name="minimum">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_page">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButton_next">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QToolButton{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>下一页</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButton_startUpdate">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QToolButton{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>停止刷新</string>
+                     </property>
+                     <property name="shortcut">
+                      <string>S</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="toolButtonAdd">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QToolButton#toolButtonAdd{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButtonAdd:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>添加</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_remark">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_11">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="remarkView" name="tableView_remark">
+                 <property name="styleSheet">
+                  <string notr="true">QTableView{
+    color: white;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    background-color: rgb(108, 108, 108);               /*表格内背景色*/
+    alternate-background-color: rgb(64, 64, 64);
+    selection-color: white;                             /*选中区域的文字颜色*/
+    selection-background-color: transparent;        /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 0px 0px;
+    /*background-color: rgb(250, 250, 115);*/
+    /*alternate-background-color: rgb(141, 163, 215);*/
+}
+QHeaderView{
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(0, 85, 127);/*设置表头空白区域背景色*/
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+QHeaderView#hHeader::section {
+    background-color:darkcyan;
+    color: red;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    height:40;
+    width:300;
+    selection-background-color: rgb(0, 85, 127);
+}
+QHeaderView#vHeader::section {
+    background-color: #000000;
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    width:30;
+}</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <attribute name="title">
+          <string>配置</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_10">
+          <item row="0" column="1">
+           <widget class="QFrame" name="frame_3">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_9">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
+             <property name="verticalSpacing">
+              <number>3</number>
+             </property>
+             <item row="1" column="0">
+              <widget class="qualityStandardView" name="tableView_qualityStandard">
+               <property name="styleSheet">
+                <string notr="true">QTableView#tableView_qualityStandard{
+    color: white;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    background-color: rgb(108, 108, 108);
+ /*表格内背景色*/
+    alternate-background-color:rgb(64, 64, 64);
+    selection-color: white;                             /*选中区域的文字颜色*/
+    selection-background-color: transparent;       /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 0px 0px;
+   
+}
+QHeaderView{
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(0, 85, 127);/*设置表头空白区域背景色*/
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+QHeaderView#hHeader::section {
+    background-color:darkcyan;
+    color: red;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    height:40;
+    width:300;
+    selection-background-color: rgb(0, 85, 127);
+}
+QHeaderView#vHeader::section {
+    background-color: #000000;
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    width:30;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_title">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 255, 255);</string>
+                 </property>
+                 <property name="text">
+                  <string>带材质量问题判定标准</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0" rowspan="2">
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="minimumSize">
+             <size>
+              <width>450</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGroupBox#groupBox_3{
+ color: rgb(255, 255, 255);
+ border:1px solid rgb(255, 255, 255);
+}
+QGroupBox#groupBox_3::title {
+  margin-top:-16px;
+  padding: -16 6px 0 6px;
+  left:10px;
+}</string>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_7">
+             <property name="leftMargin">
+              <number>6</number>
+             </property>
+             <property name="topMargin">
+              <number>10</number>
+             </property>
+             <property name="rightMargin">
+              <number>6</number>
+             </property>
+             <property name="bottomMargin">
+              <number>6</number>
+             </property>
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <spacer name="horizontalSpacer_8">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>阈值类型:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_value">
+                   <property name="minimumSize">
+                    <size>
+                     <width>180</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="sizeIncrement">
+                    <size>
+                     <width>120</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QComboBox{
+border:1px solid gray;
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+height: 30px;
+}
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+    /*outline: 1px solid gray;    选定项的虚框 */
+    border: 0px solid gray;   /* 整个下拉窗体的边框 */
+    color: white;
+    background-color: #545454;   /* 整个下拉窗体的背景色 */
+    selection-background-color: #55aaff;   /* 整个下拉窗体被选中项的背景色 */
+}
+
+/* 下拉后，整个下拉窗体每项的样式 */
+QComboBox QAbstractItemView::item {
+    height: 50px;   /* 项的高度 */
+}
+
+/* 下拉后，整个下拉窗体越过每项的样式 */
+QComboBox QAbstractItemView::item:hover {
+    color: #FFFFFF;
+    background-color: #55aaff;   /* 整个下拉窗体越过每项的背景色 */
+}
+
+/* 下拉后，整个下拉窗体被选择的每项的样式 */
+QComboBox QAbstractItemView::item:selected {
+    color: #FFFFFF;
+    background-color: #55aaff;
+}</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>记录数据库阈值</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>报警阈值</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>导出阈值</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="toolButton_add">
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QToolButton#toolButton_add{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_add:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                   </property>
+                   <property name="text">
+                    <string>添加阈值</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QListWidget" name="listWidget_settingFile">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 255, 255);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_save_setting">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton#pushButton_save_setting{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QPushButton#pushButton_save_setting:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+              </property>
+              <property name="text">
+               <string>保存配置</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_qualityInspectionRecord">
+         <attribute name="title">
+          <string>质检记录</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_14">
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="title">
+             <string>质检记录</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_13">
+             <item row="1" column="0">
+              <widget class="tableViewQualityInspectionRecord" name="tableView_qualityInspectionRecord">
+               <property name="styleSheet">
+                <string notr="true">QTableView{
+    color: white;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    background-color: rgb(108, 108, 108);               /*表格内背景色*/
+    alternate-background-color: rgb(64, 64, 64);
+    selection-color: white;                             /*选中区域的文字颜色*/ 
+    selection-background-color: transparent;       /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 0px 0px;
+    /*background-color: rgb(250, 250, 115);*/
+    /*alternate-background-color: rgb(141, 163, 215);*/
+}
+QHeaderView{
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(0, 85, 127);/*设置表头空白区域背景色*/
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+QHeaderView#hHeader::section {
+    background-color:darkcyan;
+    color: red;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    height:40;
+    width:300;
+    selection-background-color: rgb(0, 85, 127);
+}
+QHeaderView#vHeader::section {
+    background-color: #000000;
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    width:30;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <spacer name="horizontalSpacer_10">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QToolButton" name="toolButton_inspection">
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QToolButton#toolButton_inspection{	
+color: rgb(255, 255, 255);
+background-color: rgb(144, 144, 144);
+}
+QToolButton#toolButton_inspection:disabled{
+        background-color: rgb(144, 144, 144);
+		color: #bbbbbb;
+		outline: none;
+		border-style:inset;
+    }</string>
+                 </property>
+                 <property name="text">
+                  <string>存档</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_PLC">
+         <attribute name="title">
+          <string>PLC</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_12">
+          <item row="0" column="0">
+           <widget class="settingFormPLC" name="widget" native="true"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>stripQualityView</class>
+   <extends>QTableView</extends>
+   <header>stripQualityView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>testRecordView</class>
+   <extends>QTableView</extends>
+   <header>testRecordView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>remarkView</class>
+   <extends>QTableView</extends>
+   <header>remarkView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>qualityStandardView</class>
+   <extends>QTableView</extends>
+   <header>qualityStandardView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>settingFormPLC</class>
+   <extends>QWidget</extends>
+   <header>settingformplc.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>tableViewQualityInspectionRecord</class>
+   <extends>QTableView</extends>
+   <header>tableViewQualityInspectionRecord.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="TooL">
+      <UniqueIdentifier>{a072ed15-cd52-4383-9b35-121875fd6e45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TooL\Header Files">
+      <UniqueIdentifier>{665e3923-face-47a8-9ce0-13a358fff718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TooL\Source Files">
+      <UniqueIdentifier>{d2515cc9-8113-4d7c-8ed9-a8a3cb33c3e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TooL\UI">
+      <UniqueIdentifier>{36ef0e73-2d39-44c2-b5e0-73b2a79fc7e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera">
+      <UniqueIdentifier>{d1721957-5280-4942-b48d-1622aa075c87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sql">
+      <UniqueIdentifier>{e284fbc8-7426-4ab9-b15a-d374df5a6b0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ui\ciwa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\detectionscheme.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\detectionschemeroi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\planmsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\planmsgdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\systemconfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\alg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\mylistwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\donutbreakdownchart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\chartslice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\solution.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\runframeinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\group.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\systeminfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\cpumemorylabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\databasesqlite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\widgetpic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\gpumemorylabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\windowing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\runframetable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\runframenewui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\runframetablewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\runtoprightdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\writeregistermodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\solutionicon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\ciwasocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\tcp_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\tcp_server_private.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\debugconfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\debugdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\baseparam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\loginthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\proc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\fenpIni.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\tableWidgetParent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\nbaseswitchbutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\importandexport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\excelexport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\excel\qexcelengine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\messageDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\ciwamsgdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\commonconfigini.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\creatreportform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\camera\cameramanage\cameramanage.cpp">
+      <Filter>Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\threshold.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\wantusblight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\postprocess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proCategoryItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stripQualityView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testRecordView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="remarkView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="baseWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qualityStandardView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qualityStandardItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qualityStandardComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\publicClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataMainFormZJ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tableViewEditItemForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="databaseSqlInset.cpp">
+      <Filter>Source Files\sql</Filter>
+    </ClCompile>
+    <ClCompile Include="yellowDirtItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settingFormPLC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\plc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tableViewQualityInspectionRecord.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="addTestReord.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataSql.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="threadTaskSql.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlOperation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="operationPDF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opercheckboxitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\ui\ciwa.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\detectionscheme.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\planmsg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\planmsgdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\systemconfig.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\runframeinfo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\login.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\windowing.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\runframetable.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\runframenewui.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\runframetablewidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\runtoprightdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\debugconfig.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\tableWidgetParent.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\importandexport.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\excelexport.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\messageDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\ui\creatreportform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="proCategoryItem.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="stripQualityView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="testRecordView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="remarkView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="baseWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qualityStandardView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qualityStandardItem.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="qualityStandardComboBox.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dataMainFormZJ.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="tableViewEditItemForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="yellowDirtItem.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="settingFormPLC.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="tableViewQualityInspectionRecord.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="addTestReord.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="opercheckboxitem.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="..\ui\ciwa.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="..\resources\Resource.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ui\ciwa.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\detectionscheme.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\detectionschemeroi.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\planmsg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\planmsgdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\systemconfig.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\mylistwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\chartslice.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\runframeinfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\systeminfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\cpumemorylabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\login.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\widgetpic.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\gpumemorylabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\windowing.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\source\writeregistermodel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\runframetable.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\runframenewui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\runframetablewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\runtoprightdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\socket\ciwasocket.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\socket\tcp_server.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\socket\tcp_server_private.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\debugconfig.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\loginthread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\tableWidgetParent.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\nbaseswitchbutton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\importandexport.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\excelexport.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\messageDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\commonconfigini.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ui\creatreportform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="proCategoryItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="stripQualityView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="testRecordView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="remarkView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="baseWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qualityStandardView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qualityStandardItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qualityStandardComboBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tableViewEditItemForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dataMainFormZJ.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="yellowDirtItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="settingFormPLC.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tableViewQualityInspectionRecord.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="addTestReord.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dataSql.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="threadTaskSql.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="sqlOperation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="operationPDF.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="opercheckboxitem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\alg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\uicommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\donutbreakdownchart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\solution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\customtabstyle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\databasesqlite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\solutionicon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\debugdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\baseparam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\proc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\fenpIni.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\excel\qexcelengine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\ciwamsgdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\dumpfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\plcinterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\camera\cameramanage\cameracomm.h">
+      <Filter>Source Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\camera\cameramanage\camerainterface.h">
+      <Filter>Source Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\camera\cameramanage\cameramanage.h">
+      <Filter>Source Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\wantusblight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\threshold.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\publicClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\plc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="databaseSqlInset.h">
+      <Filter>Source Files\sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\postprocess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ciwa.rc" />
+  </ItemGroup>
+</Project>
