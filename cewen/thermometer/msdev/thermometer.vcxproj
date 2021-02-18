@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{734535ef-2851-4a17-a948-fccdf33b5933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera">
+      <UniqueIdentifier>{81f78183-357d-42a9-8914-8f3a8de23268}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera\visible">
+      <UniqueIdentifier>{9d178241-1c74-4f6d-972d-0806372ecaf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera\infrare">
+      <UniqueIdentifier>{8ca7d272-5b24-40c8-b512-ac59c7b2ed2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{ab80958b-bb4a-436d-abaa-09528f96b757}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\detect">
+      <UniqueIdentifier>{64d426e6-ae65-4034-89d5-b5802b3f7b0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\measure">
+      <UniqueIdentifier>{a68b0e54-9d65-487f-8ef3-8a402962707f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera\seekware">
+      <UniqueIdentifier>{373ed6b3-8b83-4aa2-8c9f-642038679b05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{64e93e0c-06ef-4e8e-b4e3-2b91c70cb4d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera\general">
+      <UniqueIdentifier>{df997b7c-5a8e-446d-82b6-a8c578644b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\detect\sort">
+      <UniqueIdentifier>{fe497237-aa2f-4d02-a147-7123392e3b7e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thermometer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ui\TitleBar.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\camera\camera.cpp">
+      <Filter>Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\camera\camerafactory.cpp">
+      <Filter>Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\camera\infrare\infrare.cpp">
+      <Filter>Source Files\camera\infrare</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\camera\visible\visible.cpp">
+      <Filter>Source Files\camera\visible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\engine\engine.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\detect\detect.cpp">
+      <Filter>Source Files\detect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\measure\measure.cpp">
+      <Filter>Source Files\measure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\common\log.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\camera\WindowsCamera\WindowsCamera.cpp">
+      <Filter>Source Files\camera\general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\camera\SeekWareCamera\seekwarecamera.cpp">
+      <Filter>Source Files\camera\seekware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\detect\sort\Hungarian.cpp">
+      <Filter>Source Files\detect\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\detect\sort\KalmanTracker.cpp">
+      <Filter>Source Files\detect\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\detect\sort\sort.cpp">
+      <Filter>Source Files\detect\sort</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="thermometer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\source\ui\TitleBar.h">
+      <Filter>ui</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="thermometer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="thermometer.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\camera\camera.h">
+      <Filter>Source Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\camera\camerafactory.h">
+      <Filter>Source Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\camera\infrare\infrare.h">
+      <Filter>Source Files\camera\infrare</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\camera\visible\visible.h">
+      <Filter>Source Files\camera\visible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\engine\engine.h">
+      <Filter>Source Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\detect\detect.h">
+      <Filter>Source Files\detect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\measure\measure.h">
+      <Filter>Source Files\measure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\common\common.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\common\log.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\camera\WindowsCamera\testWindowsCamera.h">
+      <Filter>Source Files\camera\general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\camera\WindowsCamera\WindowsCamera.h">
+      <Filter>Source Files\camera\general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\camera\SeekWareCamera\SeekWare.h">
+      <Filter>Source Files\camera\seekware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\camera\SeekWareCamera\seekwarecamera.h">
+      <Filter>Source Files\camera\seekware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\detect\sort\Hungarian.h">
+      <Filter>Source Files\detect\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\detect\sort\KalmanTracker.h">
+      <Filter>Source Files\detect\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\detect\sort\sort.h">
+      <Filter>Source Files\detect\sort</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\source\camera\SeekWareCamera\SeekWare.lib">
+      <Filter>Source Files\camera\seekware</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
