@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{93A7CF42-8CF5-47B2-BF89-E854427C086C}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>charts;concurrent;core;gui;multimedia;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>charts;concurrent;core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PreprocessorDefinitions>TRAINER_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CUDA_PATH)\include;$(ProjectDir)..\src\labeltool;$(SolutionDir)..\include;$(ProjectDir)..\src\ui;$(ProjectDir)..\src\messagebox;$(ProjectDir)..\src\;..\..\..\..\manuvision-algorithm\3rdparty\opencv\include;..\..\..\..\manuvision-algorithm\3rdparty\opencv\include\opencv2;$(SolutionDir)..\3rdparty\yaml\include;..\src\ui;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cudart.lib;opencv_world400d.lib;libyaml-cppmdd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\3rdparty\tensorRT\lib;..\..\..\..\manuvision-algorithm\3rdparty\opencv\lib;$(SolutionDir)..\3rdparty\yaml\lib;$(CUDA_PATH)\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PreprocessorDefinitions>TRAINER_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CUDA_PATH)\include;$(ProjectDir)..\src\labeltool;$(SolutionDir)..\include;$(ProjectDir)..\src\ui;$(ProjectDir)..\src\messagebox;$(ProjectDir)..\src\;$(CV_INC400);$(SolutionDir)..\3rdparty\yaml\include;..\src\ui;$(SolutionDir)..\3rdparty\tensorRT\include\common;$(SolutionDir)..\3rdparty\tensorRT\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(CUDA_PATH)\lib\x64;$(CV_LIB400);$(SolutionDir)..\3rdparty\yaml\lib;$(SolutionDir)..\3rdparty\tensorRT\lib;$(Qt_LIBPATH_);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world400.lib;libyaml-cppmd.lib;$(Qt_LIBS_);cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\alg.cpp" />
+    <ClCompile Include="..\src\encrypt.cpp" />
+    <ClCompile Include="..\src\fileprojectmanager.cpp" />
+    <ClCompile Include="..\src\labeltool\imagelabel.cpp" />
+    <ClCompile Include="..\src\logger.cpp" />
+    <ClCompile Include="..\src\messagebox\ciwamsgdialog.cpp" />
+    <ClCompile Include="..\src\messagebox\messageDialog.cpp" />
+    <ClCompile Include="..\src\newui\listimagewidget.cpp" />
+    <ClCompile Include="..\src\newui\menubar.cpp" />
+    <ClCompile Include="..\src\newui\trainermainform.cpp" />
+    <ClCompile Include="..\src\rc4.cpp" />
+    <ClCompile Include="..\src\resultanalysis_multiclass.cpp" />
+    <ClCompile Include="..\src\ui\baseChartView.cpp" />
+    <ClCompile Include="..\src\ui\btnDrogForm.cpp" />
+    <ClCompile Include="..\src\ui\Callout.cpp" />
+    <ClCompile Include="..\src\ui\chartView.cpp" />
+    <ClCompile Include="..\src\ui\chartViewRoc.cpp" />
+    <ClCompile Include="..\src\ui\dataMatrixGroup.cpp" />
+    <ClCompile Include="..\src\ui\dataWidget.cpp" />
+    <ClCompile Include="..\src\ui\moreTypeForm.cpp" />
+    <ClCompile Include="..\src\ui\publicClass.cpp" />
+    <ClCompile Include="..\src\ui\seriesMainForm.cpp" />
+    <ClCompile Include="..\src\ui\SwitchButton.cpp" />
+    <ClCompile Include="..\src\ui\sysSettingForm.cpp" />
+    <ClCompile Include="..\src\ui\trainer.cpp" />
+    <ClCompile Include="..\src\ui\trainprogress.cpp" />
+    <ClCompile Include="..\src\ui\treeViewBaseWidget.cpp" />
+    <ClCompile Include="baseListWidget.cpp" />
+    <ClCompile Include="controlBtnForm.cpp" />
+    <ClCompile Include="imageForm.cpp" />
+    <ClCompile Include="imageShowForm.cpp" />
+    <ClCompile Include="parameterConfigForm.cpp" />
+    <ClCompile Include="proListItem.cpp" />
+    <ClCompile Include="proListView.cpp" />
+    <ClCompile Include="proNameListForm.cpp" />
+    <ClCompile Include="proTreeview.cpp" />
+    <ClCompile Include="sysStatusFrame.cpp" />
+    <ClCompile Include="trainerListProForm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\src\labeltool\imagelabel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\src\ui\trainer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\src\messagebox\messageDialog.ui" />
+    <QtUic Include="..\src\newui\listimagewidget.ui" />
+    <QtUic Include="..\src\newui\menubar.ui" />
+    <QtUic Include="..\src\newui\trainermainform.ui" />
+    <QtUic Include="..\src\ui\btnDrogForm.ui" />
+    <QtUic Include="..\src\ui\dataMatrixGroup.ui" />
+    <QtUic Include="..\src\ui\dataWidget.ui" />
+    <QtUic Include="..\src\ui\moreTypeForm.ui" />
+    <QtUic Include="..\src\ui\seriesMainForm.ui" />
+    <QtUic Include="..\src\ui\sysSettingForm.ui" />
+    <QtUic Include="..\src\ui\trainer.ui" />
+    <QtUic Include="..\src\ui\treeViewBaseWidget.ui" />
+    <QtUic Include="baseListWidget.ui" />
+    <QtUic Include="controlBtnForm.ui" />
+    <QtUic Include="imageForm.ui" />
+    <QtUic Include="imageShowForm.ui" />
+    <QtUic Include="parameterConfigForm.ui" />
+    <QtUic Include="proListItem.ui" />
+    <QtUic Include="proListView.ui" />
+    <QtUic Include="proNameListForm.ui" />
+    <QtUic Include="proTreeview.ui" />
+    <QtUic Include="sysStatusFrame.ui" />
+    <QtUic Include="trainerListProForm.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\alg.h" />
+    <ClInclude Include="..\src\encrypt.hpp" />
+    <ClInclude Include="..\src\filedatastream.h" />
+    <ClInclude Include="..\src\fileprojectmanager.h" />
+    <ClInclude Include="..\src\messagebox\ciwamsgdialog.h" />
+    <QtMoc Include="sysStatusFrame.h" />
+    <QtMoc Include="trainerListProForm.h" />
+    <QtMoc Include="..\src\ui\moreTypeForm.h" />
+    <QtMoc Include="..\src\ui\treeViewBaseWidget.h" />
+    <QtMoc Include="..\src\newui\listimagewidget.h" />
+    <QtMoc Include="..\src\newui\menubar.h" />
+    <QtMoc Include="..\src\newui\trainermainform.h" />
+    <ClInclude Include="..\src\resultanalysis_multiclass.h" />
+    <QtMoc Include="proNameListForm.h" />
+    <QtMoc Include="proListItem.h" />
+    <QtMoc Include="proListView.h" />
+    <QtMoc Include="proTreeview.h" />
+    <QtMoc Include="parameterConfigForm.h" />
+    <QtMoc Include="controlBtnForm.h" />
+    <QtMoc Include="imageShowForm.h" />
+    <QtMoc Include="imageForm.h" />
+    <QtMoc Include="baseListWidget.h" />
+    <ClInclude Include="publicStruct.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="..\src\ui\SwitchButton.h" />
+    <QtMoc Include="..\src\ui\sysSettingForm.h" />
+    <QtMoc Include="..\src\ui\chartViewRoc.h" />
+    <QtMoc Include="..\src\ui\btnDrogForm.h" />
+    <ClInclude Include="..\src\ui\publicClass.h" />
+    <QtMoc Include="..\src\ui\baseChartView.h" />
+    <ClInclude Include="..\src\ui\Callout.h" />
+    <QtMoc Include="..\src\ui\dataMatrixGroup.h" />
+    <QtMoc Include="..\src\ui\dataWidget.h" />
+    <QtMoc Include="..\src\ui\seriesMainForm.h" />
+    <QtMoc Include="..\src\ui\chartView.h" />
+    <QtMoc Include="..\src\messagebox\messageDialog.h" />
+    <ClInclude Include="..\src\qtmat.h" />
+    <ClInclude Include="..\src\rc4.hpp" />
+    <ClInclude Include="..\src\trainer_common.h" />
+    <QtMoc Include="..\src\ui\trainprogress.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\..\..\build\packages\boost.1.71.0.0\build\boost.targets" Condition="Exists('..\..\..\build\packages\boost.1.71.0.0\build\boost.targets')" />
+    <Import Project="..\..\..\build\packages\boost_serialization-vc141.1.71.0.0\build\boost_serialization-vc141.targets" Condition="Exists('..\..\..\build\packages\boost_serialization-vc141.1.71.0.0\build\boost_serialization-vc141.targets')" />
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\build\packages\boost.1.71.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\build\packages\boost.1.71.0.0\build\boost.targets'))" />
+    <Error Condition="!Exists('..\..\..\build\packages\boost_serialization-vc141.1.71.0.0\build\boost_serialization-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\build\packages\boost_serialization-vc141.1.71.0.0\build\boost_serialization-vc141.targets'))" />
+  </Target>
+</Project>

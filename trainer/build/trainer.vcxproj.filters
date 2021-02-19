@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{a01fff8a-12bc-4cd0-9595-29964cf34d50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\labeltool">
+      <UniqueIdentifier>{34d2901a-844e-4c20-9ed5-de05e8ff658c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="UI\messagebox">
+      <UniqueIdentifier>{2c1efbab-d4ab-4ee5-87be-6e4ff74cdf49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="newui">
+      <UniqueIdentifier>{a227ff82-5d46-4253-aec6-f3673345c1ba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\labeltool\imagelabel.cpp">
+      <Filter>UI\labeltool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\trainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fileprojectmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\alg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\trainprogress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\messagebox\ciwamsgdialog.cpp">
+      <Filter>UI\messagebox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\messagebox\messageDialog.cpp">
+      <Filter>UI\messagebox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\encrypt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\rc4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\chartView.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\Callout.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\seriesMainForm.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\dataWidget.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\dataMatrixGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\baseChartView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\publicClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\chartViewRoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\btnDrogForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\sysSettingForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\SwitchButton.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\moreTypeForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\treeViewBaseWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resultanalysis_multiclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proNameListForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proListItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proListView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proTreeview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="trainerListProForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parameterConfigForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlBtnForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageShowForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sysStatusFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="baseListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\newui\listimagewidget.cpp">
+      <Filter>newui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\newui\menubar.cpp">
+      <Filter>newui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\newui\trainermainform.cpp">
+      <Filter>newui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\src\labeltool\imagelabel.h">
+      <Filter>UI\labeltool</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\trainer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\trainprogress.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\messagebox\messageDialog.h">
+      <Filter>UI\messagebox</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\chartView.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\seriesMainForm.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\dataWidget.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\dataMatrixGroup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\baseChartView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\chartViewRoc.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\btnDrogForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\sysSettingForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\SwitchButton.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\moreTypeForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\ui\treeViewBaseWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="proNameListForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="proListItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="proListView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="proTreeview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="trainerListProForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="parameterConfigForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="controlBtnForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="imageShowForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="imageForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="sysStatusFrame.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="baseListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\newui\listimagewidget.h">
+      <Filter>newui</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\newui\menubar.h">
+      <Filter>newui</Filter>
+    </QtMoc>
+    <QtMoc Include="..\src\newui\trainermainform.h">
+      <Filter>newui</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\src\messagebox\messageDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\src\ui\seriesMainForm.ui">
+      <Filter>UI</Filter>
+    </QtUic>
+    <QtUic Include="..\src\ui\dataWidget.ui">
+      <Filter>UI</Filter>
+    </QtUic>
+    <QtUic Include="..\src\ui\dataMatrixGroup.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\src\ui\btnDrogForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\src\ui\sysSettingForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\src\ui\moreTypeForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\src\ui\treeViewBaseWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="proNameListForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="proListItem.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="proListView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="proTreeview.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="trainerListProForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="parameterConfigForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="controlBtnForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="imageShowForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="imageForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="sysStatusFrame.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="baseListWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\src\ui\trainer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="..\src\newui\listimagewidget.ui">
+      <Filter>newui</Filter>
+    </QtUic>
+    <QtUic Include="..\src\newui\menubar.ui">
+      <Filter>newui</Filter>
+    </QtUic>
+    <QtUic Include="..\src\newui\trainermainform.ui">
+      <Filter>newui</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\trainer_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fileprojectmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\filedatastream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\qtmat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\alg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\messagebox\ciwamsgdialog.h">
+      <Filter>UI\messagebox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\encrypt.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\rc4.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\Callout.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\publicClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resultanalysis_multiclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="publicStruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

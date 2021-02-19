@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>proListView</class>
+ <widget class="QTableView" name="proListView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>proListView</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTableView#proListView{
+    color: white;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    background-color: rgb(108, 108, 108);               /*表格内背景色*/
+    alternate-background-color: rgb(64, 64, 64);
+    selection-color: white;                             /*选中区域的文字颜色*/
+    selection-background-color: rgb(0, 85, 127);        /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 0px 0px;
+    /*background-color: rgb(250, 250, 115);*/
+    /*alternate-background-color: rgb(141, 163, 215);*/
+}
+QHeaderView{
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(0, 85, 127);/*设置表头空白区域背景色*/
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+QHeaderView#hHeader::section {
+    background-color:darkcyan;
+    color: red;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    height:40;
+    width:300;
+    selection-background-color: rgb(0, 85, 127);
+}
+QHeaderView#vHeader::section {
+    background-color: #000000;
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+    width:30;
+}</string>
+  </property>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
